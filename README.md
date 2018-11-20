@@ -108,7 +108,7 @@ plt.show()
 
 This plot helps us identify clear outliers in certain years!
 
-## Grouping and Visualizing time-series Data
+## Grouping and Visualizing time series data
 
 Now, let's group data by year and create a line plot for each year for direct comparison.
 You'll regroup data per year using `Pandas.grouper()`. 
