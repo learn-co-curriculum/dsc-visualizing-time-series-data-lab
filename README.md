@@ -1,21 +1,21 @@
 
-# Time-series Visualization 
+# Visualizing Time Series Data - Lab
 
 ## Introduction
 
 As mentioned in the lecture, time series visualizations play an important role in the analysis of time series data. Time series are often plotted to allow data diagnostics to identify temporal structures. 
 
-In this lab, we'll cover main techqniques for visualizing timeseries data in Python using the minimum daily temperatures over 10 years (1981-1990) in the city Melbourne, Australia again. You might remember from the lesson that the units are in degrees Celsius and there are 3,650 observations. The [source](https://datamarket.com/data/set/2324/daily-minimum-temperatures-in-melbourne-australia-1981-1990) of the data is credited as the Australian Bureau of Meteorology.
+In this lab, we'll cover main techniques for visualizing timeseries data in Python using the minimum daily temperatures over 10 years (1981-1990) in the city Melbourne, Australia again. You might remember from the lesson that the units are in degrees Celsius and there are 3,650 observations. The [source](https://datamarket.com/data/set/2324/daily-minimum-temperatures-in-melbourne-australia-1981-1990) of the data is credited as the Australian Bureau of Meteorology.
 
 ## Objectives: 
 
 * Explore the temporal structure of time series with line plots
-* Understand and describe the distribution of observations using histograms and density plots.
+* Understand and describe the distribution of observations using histograms and density plots
 * Measure the change in distribution over intervals using box and whisker plots and heat map plots
 
 ## Let's get started!
 
-Import the necessary libraried
+Import the necessary libraries
 
 
 ```python
@@ -30,7 +30,7 @@ import matplotlib.pyplot as plt
 
 
 ```python
-# Load the data from temp.csv as a new pandas 'Series' , print header and check the index
+# Load the data from min_temp.csv and check the index
 temp_data = pd.read_csv("min_temp.csv")
 temp_data.index
 ```
@@ -81,7 +81,7 @@ Create a time series line plot for `temp_data`
 
 
 ```python
-# Draw a line plot using temp and .plot() function. 
+# Draw a line plot using temp_data
 temp_data.plot(figsize = (22,8))
 plt.show()
 ```
@@ -92,7 +92,7 @@ plt.show()
 
 Some distinguishable patterns appear when we plot the data. Here we can see a pattern in our timeseries i.e. temperature values are maximum at the beginnig of each year and minimum at around the 6th month. Yes, we are talking about Australia here so this is normal. This cyclical pattern is known as seasonality and will be covered in later labs. 
 
-### Time-series dot plot
+## Time Series dot plot
 For a dense timeseries, as seen above, you may want to change the style of a line plot for a more refined visualization with a higher resolution of events. One way could be to change the continuous line to dots, each representing one entry in the time series. this can be achieved by `style` parameter of the line plot. lets pass `style='b.` as an argument to `.plot()` function
 
 
