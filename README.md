@@ -1,5 +1,5 @@
 
-# Time-series Visualization 
+# Visualizing Time Series Data - Lab
 
 ## Introduction
 
@@ -10,7 +10,7 @@ In this lab, we'll cover main techniques for visualizing timeseries data in Pyth
 ## Objectives: 
 
 * Explore the temporal structure of time series with line plots
-* Understand and describe the distribution of observations using histograms and density plots.
+* Understand and describe the distribution of observations using histograms and density plots
 * Measure the change in distribution over intervals using box and whisker plots and heat map plots
 
 ## Let's get started!
@@ -45,7 +45,7 @@ Create a time series line plot for `temp_data`
 
 Some distinguishable patterns appear when we plot the data. Here we can see a pattern in our timeseries i.e. temperature values are maximum at the beginnig of each year and minimum at around the 6th month. Yes, we are talking about Australia here so this is normal. This cyclical pattern is known as seasonality and will be covered in later labs. 
 
-### Time-series dot plot
+## Time Series dot plot
 For a dense timeseries, as seen above, you may want to change the style of a line plot for a more refined visualization with a higher resolution of events. One way could be to change the continuous line to dots, each representing one entry in the time series. this can be achieved by `style` parameter of the line plot. lets pass `style='b.` as an argument to `.plot()` function
 
 
@@ -56,7 +56,7 @@ For a dense timeseries, as seen above, you may want to change the style of a lin
 
 This plot helps us identify clear outliers in certain years!
 
-## Grouping and Visualizing time-series Data
+## Grouping and Visualizing time series data
 
 Now, let's group data by year and create a line plot for each year for direct comparison.
 You'll regroup data per year using `Pandas.grouper()`. 
