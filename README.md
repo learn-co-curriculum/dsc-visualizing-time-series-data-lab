@@ -7,7 +7,9 @@ As mentioned in the lecture, time series visualizations play an important role i
 
 In this lab, we'll cover main techniques for visualizing timeseries data in Python using the minimum daily temperatures over 10 years (1981-1990) in the city Melbourne, Australia again. You might remember from the lesson that the units are in degrees Celsius and there are 3,650 observations. The [source](https://datamarket.com/data/set/2324/daily-minimum-temperatures-in-melbourne-australia-1981-1990) of the data is credited as the Australian Bureau of Meteorology.
 
-## Objectives: 
+## Objectives
+
+You will be able to:
 
 * Explore the temporal structure of time series with line plots
 * Understand and describe the distribution of observations using histograms and density plots
