@@ -33,7 +33,17 @@ Import the necessary libraries
 
 Check the info. Next, make sure the index is the timestamp.
 
+
+```python
+
+```
+
 Check the info again
+
+
+```python
+
+```
 
 ## Time Series line plot
 
@@ -75,6 +85,11 @@ You'll regroup data per year using `Pandas.grouper()`.
 
 ```python
 #Create a new DataFrame and store yearly values in columns 
+
+```
+
+
+```python
 
 ```
 
