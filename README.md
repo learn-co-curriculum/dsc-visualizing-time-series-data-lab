@@ -22,18 +22,26 @@ Import the necessary libraries
 
 ```python
 # Load required libraries
-
 ```
 
 
 ```python
 # Load the data from min_temp.csv and check the index
-
 ```
 
 Check the info. Next, make sure the index is the timestamp.
 
+
+```python
+# Your code here
+```
+
 Check the info again
+
+
+```python
+# Your code here
+```
 
 ## Time Series line plot
 
@@ -42,7 +50,6 @@ Create a time series line plot for `temp_data`
 
 ```python
 # Draw a line plot using temp_data 
-
 ```
 
 Some distinguishable patterns appear when we plot the data. Here we can see a pattern in our time series i.e. temperature values are maximum at the beginning of each year and minimum at around the 6th month. Yes, we are talking about Australia here so this is normal. This cyclical pattern is known as seasonality and will be covered in later labs. 
@@ -53,7 +60,6 @@ For a dense time series, as seen above, you may want to change the style of a li
 
 ```python
 # Use dots instead on a continuous line and redraw the timeseries. 
-
 ```
 
 This plot helps us identify clear outliers in certain years!
@@ -69,13 +75,11 @@ You'll regroup data per year using `Pandas.grouper()`.
 
 ```python
 # Use pandas grouper to group values using annual frequency
-
 ```
 
 
 ```python
 #Create a new DataFrame and store yearly values in columns 
-
 ```
 
 You can see 10 subplots corresponding to the number of columns in your new DataFrame. Each plot is 365 days in length following the annual frequency.
@@ -85,7 +89,6 @@ Now, plot the same plots in an overlapping way.
 
 ```python
 # Plot overlapping yearly groups 
-
 ```
 
 We can see in both plots above that due to the dense nature of time-series (365 values) and a high correlation between the values in different years (i.e. similar temperature values for each year), we can not clearly identify any differences in these groups. However, if you try this on the CO2 dataset used in the last lab, you should be able to see a clear trend showing an increase every year. 
@@ -97,7 +100,6 @@ Create a histogram for your data.
 
 ```python
 # Plot a histogram of the temperature dataset
-
 ```
 
 The plot shows a distribution that looks strongly Gaussian/Normal. The plotting function automatically selects the size of the bins based on the spread of values in the data.
@@ -108,7 +110,6 @@ Create a time series density plot
 
 ```python
 # Plot a density plot for temperature dataset
-
 ```
 
 We can see that the density plot provides a clearer summary of the distribution of observations. We can see that perhaps the distribution is a little asymmetrical and perhaps a little pointy to be Gaussian.
@@ -120,7 +121,6 @@ Let's use our groups by years to plot a box and whisker plot for each year for d
 
 ```python
 # Generate a box and whiskers plot for temp_annual dataframe
-
 ```
 
 In our plot above, we don't see much difference in the mean temperature over years, however, we can spot some outliers showing extremely cold or hot days. 
@@ -136,14 +136,11 @@ We can also plot distribution across months within each year. Perform the follow
 ```python
 # Use temp Dataset to extract values for 1990
 
-
 # Add each month to dataFrame as a column
-
 
 # Set the column names for each month i.e. 1,2,3, .., 12
 
 # Plot the box and whiskers plot for each month 
-
 ```
 
 We see 12 box and whisker plots, showing the significant change in the distribution of minimum temperatures across the months of the year from the Southern Hemisphere summer in January to the Southern Hemisphere winter in the middle of the year, and back to summer again.
@@ -158,8 +155,6 @@ Let's create a heatmap of the Minimum Daily Temperatures data. The `matshow()` f
 
 ```python
 ##### Transpose the yearly group DataFrame and draw a heatmap with matshow()
-
-
 ```
 
 We can now see that the plot shows the cooler minimum temperatures in the middle days of the years and the warmer minimum temperatures in the start and ends of the years, and all the fading and complexity in between.
@@ -168,8 +163,7 @@ Following this intuition, let's draw another heatmap comparing the months of the
 
 
 ```python
-# draw a heatmap comparing the months of the year in 1990.
-
+# Draw a heatmap comparing the months of the year in 1990.
 ```
 
 The plot shows the same macro trend seen for each year on the zoomed level of month-to-month. We can also see some white patches at the bottom of the plot. This is missing data for those months that have fewer than 31 days, with February being quite an outlier with 28 days in 1990.
